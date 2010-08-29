@@ -2,4 +2,14 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+ common:
+  back: Back
+  previous: Last
+  next: Next
+  create: Add
+  update: Edit
+  view: Details
+  new: New
+  edit: Edit
+  delete: Delete
+  erasequestion: Are you sure to delete?
