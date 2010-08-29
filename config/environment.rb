@@ -41,6 +41,6 @@ Rails::Initializer.run do |config|
 	config.i18n.default_locale = :fr
 	
 	config.gem 'will_paginate', :version => '~> 2.3.14', :source => 'http://gemcutter.org'
-	config.gem 'wvanbergen-scoped_search', :lib => 'scoped_search', :source => 'http://gems.github.com'
+	config.gem 'wvanbergen-scoped_search', :version => '~> 2.0.0', :lib => 'scoped_search', :source => 'http://gems.github.com'
 
 end
