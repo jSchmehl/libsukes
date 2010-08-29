@@ -26,6 +26,13 @@ class CountriesController < ApplicationController
   def new
     @country = Country.new
 
+		@flags = Array.new
+		Dir.foreach('public/images/flags') {
+			|file|  if !file.starts_with?('.') 
+				@flags << file
+			end
+		}
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @country }

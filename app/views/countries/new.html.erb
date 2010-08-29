@@ -14,6 +14,12 @@
 		<%=h t('country.icon') %>:<br/>
 		<%= text_field(:country, :icon) %> <span class="hint"><%=h t('country.iconhint') %></span>
 	</p>
+	<p>
+		Icones disponibles:<br/>
+		<ul style="list-style: none; float: left; font-size: 0.9em;">
+			<%= render :partial => 'flaglist', :collection => @flags, :as => :file %>
+		</ul>
+	</p>
   <p>
     <%= f.submit t('common.create') %>
   </p>
