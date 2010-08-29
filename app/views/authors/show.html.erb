@@ -2,9 +2,9 @@
 <div class="details">
 	<strong><%= @author.firstname %> <%= @author.name %></strong>
 	<br/><br/><br/>
-	vécu de <strong><%= @author.birthdate %></strong> à <strong><%= @author.deathdate %></strong>
+	vécu de <strong><%= @author.birthdate %></strong> à <strong><%= @author.deathdate.nil? ? '~' : @author.deathdate %></strong>
 	<br/><br/>
-	<%= t('author.country') %>: <strong><%= @author.country.name unless @author.country.nil? %></strong>
+	<%= t('author.country') %>: <%= '&nbsp;&nbsp;'+image_tag('flags/'+@author.country.icon, :alt => @author.country.tag)+'&nbsp;&nbsp;' unless @author.country.nil? %><strong><%= @author.country.name unless @author.country.nil? %></strong>
 	<br/><br/><br/>
 	<%=t 'book.books' %>:<br/>
 	<ul>
