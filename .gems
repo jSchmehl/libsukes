@@ -1,2 +1,3 @@
 rails -v 2.3.5
 will_paginate -v ~> 2.3.14
+wvanbergen-scoped_search -v ~> 2.0
