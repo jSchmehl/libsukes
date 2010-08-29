@@ -3,10 +3,10 @@
 development:
   encoding: unicode
   adapter: postgresql
-  username: ripdb
-  port: 5432
   host: localhost
-  database: libsukes
+  port: 5432
+  database: libsukes_dev
+  username: ripdb
   password: siff
 
 ### MySQL Settings
@@ -30,10 +30,10 @@ test:
 production:
   encoding: unicode
   adapter: postgresql
-  username: ripdb
-  port: 5432
   host: localhost
-  database: libsukes_dev
+  port: 5432
+  database: libsukes
+  username: ripdb
   password: siff
 
 ### MySQL Settings
