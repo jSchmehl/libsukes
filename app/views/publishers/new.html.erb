@@ -23,7 +23,7 @@
 		<%= text_field(:publisher, :tel) %>
 	</p>
 	<p>
-		<%=h t('country.country') %>:<br/>
+		<%=h t('publisher.country') %>:<br/>
 		<%= collection_select(:publisher, :country_id, Country.all(:order => 'name'), :id, :name, :include_blank => true) %>
 	</p>
 	<p>
