@@ -13,6 +13,8 @@ fr:
   edit: Changer
   delete: Effacer
   erasequestion: Êtes-vous sure d'effacer?
+  search: Chercher
+  search_submit: Go
  book:
   book: Livre
   books: Livres
@@ -21,6 +23,7 @@ fr:
   printdate: Année d'impression
   new: Nouveau livre
   change: Changer livre
+  search: Rechercher livres
  author:
   author: Auteur
   name: Nom

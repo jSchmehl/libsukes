@@ -25,6 +25,17 @@ class BooksController < ApplicationController
     end
   end
 
+	# GET /books/search/query
+  # GET /books/search/query.xml
+  def search
+    @books = Book.search_for(params[:query]).paginate :page => params[:page], :include => :author, :order => 'title ASC'
+
+    respond_to do |format|
+      format.html { render 'index' }
+      format.xml  { render :xml => @books }
+    end
+  end
+
   # GET /books/new
   # GET /books/new.xml
   def new
