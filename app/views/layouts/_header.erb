@@ -17,10 +17,11 @@
 				<%= text_field_tag('query', t('book.search'), :onfocus => "this.value=''", :id => 'search-text') %>
 				<%= submit_tag t('common.search_submit') %>
 			<% end -%>
+			<p>n'importe quel mot dans le titre, nom d'auteur, de collection, d'èditeur et dépositaire</p>
 		</div>
 	</li>
 	<li>
-		<h3>Listes</h3>
+		<h3 style="margin-top: 10px;">Listes</h3>
 		<ul class="links">
 			<li><%= link_to 'Toutes livres (A-Z)', :controller => 'books' %></li>
 			<li><%= link_to 'Dernieres entrées', :controller => 'books', :sort => 'created_at' %></li>
