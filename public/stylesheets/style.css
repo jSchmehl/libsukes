@@ -16,6 +16,9 @@ a, a:visited  {
 	color: #03c;
 	text-decoration: none;
 }
+a img, a:visited img {
+	border: none;
+}
 a:hover {
 	background-color: #03c;
 	color: white;
