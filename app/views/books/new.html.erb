@@ -23,6 +23,10 @@
 		<%= collection_select(:book, :owner_id, Owner.all(:order => 'name'), :id, :name, :include_blank => true) %>
 	</p>
 	<p>
+		<%=h t('book.exemplar') %>:<br/>
+		<%= text_field(:book, :exemplar) %>
+	</p>
+	<p>
 		<%=h t('book.printdate') %>:<br/>
 		<%= text_field(:book, :printdate) %>
 	</p>

@@ -17,6 +17,7 @@ fr:
   book: Livre
   books: Livres
   title: Titre
+  exemplar: N° Exemplaire
   printdate: Année d'impression
   new: Nouveau livre
   change: Changer livre

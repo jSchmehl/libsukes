@@ -6,7 +6,7 @@ development:
   username: ripdb
   port: 5432
   host: localhost
-  database: libsukes_dev
+  database: libsukes
   password: siff
 
 ### MySQL Settings
