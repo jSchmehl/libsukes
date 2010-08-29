@@ -1,0 +1,15 @@
+<h1><%= t('collection.show') %></h1>
+<div class="details">
+	<%= t('collection.collection') %>: <strong><%= @collection.name %></strong>
+	<br/><br/><br/>
+	<%=t 'book.books' %>:<br/>
+	<ul>
+		<% @books.each do |book| %>
+				<li><%= link_to book.title, book %></li>
+		<% end %>
+	</ul>
+</div>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/vcard_edit.png', :alt => t('common.edit'), :title => t('common.edit')), edit_collection_path(@collection) %>
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), collections_path %>
+</div>

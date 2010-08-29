@@ -1,0 +1,11 @@
+<table class="smalllist"><tbody>
+<% @countries.each do |country| %>
+	<tr>
+		<td style="width: 16px;"><%= image_tag('flags/'+country.icon, :alt => country.tag) unless country.icon.empty? %></td>
+		<td><strong><%= link_to country.name, country %></strong></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard.png', :alt => t('common.view'), :title => t('common.view')), country %></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard_edit.png', :alt => t('common.edit'), :title => t('common.edit')), edit_country_path(country) %></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard_delete.png', :alt => t('common.delete'), :title => t('common.delete')), country, :confirm => t('common.erasequestion'), :method => :delete %></td>
+	</tr>
+<% end %>
+</tbody></table>

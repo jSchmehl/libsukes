@@ -1,0 +1,22 @@
+<table class="details"><tbody>
+	<tr><td><%=t 'publisher.name' %>:</td><td><strong><%=h @publisher.name %></strong></td></tr>
+	<tr><td><%=t 'publisher.street' %>:</td><td><%=h @publisher.street %></td></tr>
+	<tr><td><%=t 'publisher.zip' %>:</td><td><%=h @publisher.zip %></td></tr>
+	<tr><td><%=t 'publisher.city' %>:</td><td><%=h @publisher.city %></td></tr>
+	<tr><td><%=t 'publisher.tel' %>:</td><td><%=h @publisher.tel %></td></tr>
+	<tr><td><%=t 'publisher.country' %>:</td><td><%= image_tag('flags/'+@publisher.country.icon, :alt => @publisher.country.tag)+'&nbsp;&nbsp;' unless @publisher.country.nil? %><%=h @publisher.country.name unless @publisher.country.nil? %></td></tr>
+	<tr>
+		<td><%=t 'book.books' %>:</td>
+		<td>
+			<ul>
+				<% @books.each do |book| %>
+						<li><%= link_to book.title, book %></li>
+				<% end %>
+			</ul>
+		</td>
+	</tr>
+</tbody></table>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/book_edit.png', :alt => t('common.edit'), :title => t('common.edit')), edit_publisher_path(@publisher) %>
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), publishers_path %>
+</div>

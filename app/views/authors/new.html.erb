@@ -1,0 +1,31 @@
+<h1><%=h t('author.new') %></h1>
+
+<% form_for(@author) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%=h t('author.name') %>:<br/>
+		<%= text_field(:author, :name) %>
+	</p>
+	<p>
+		<%=h t('author.firstname') %>:<br/>
+		<%= text_field(:author, :firstname) %>
+	</p>
+	<p>
+		<%=h t('author.country') %>:<br/>
+		<%= collection_select(:author, :country_id, Country.all(:order => 'name'), :id, :name, :include_blank => true) %>
+	</p>
+	<p>
+		<%=h t('author.birthdate') %>:<br/>
+		<%= text_field(:author, :birthdate) %>
+	</p>
+	<p>
+		<%=h t('author.deathdate') %>:<br/>
+		<%= text_field(:author, :deathdate) %>
+	</p>
+	<p>
+	  <%= f.submit t('common.create') %>
+	</p>
+<% end %>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), authors_path %>
+</div>

@@ -1,0 +1,68 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+ common:
+  back: Precedent
+  previous: Précédente
+  next: Suivante
+  create: Ajouter
+  update: Changer
+  view: Details
+  new: Ajouter
+  edit: Changer
+  delete: Effacer
+  erasequestion: Êtes-vous sure d'effacer?
+ book:
+  book: Livre
+  books: Livres
+  title: Titre
+  printdate: Année d'impression
+  new: Nouveau livre
+  change: Changer livre
+ author:
+  author: Auteur
+  name: Nom
+  firstname: Prénom
+  country: Nationalité
+  birthdate: Année de naissance
+  deathdate: Année de déces
+  new: Nouveau auteur
+  change: Changer auteur
+  show: Details de l'auteur
+  select: Choisir auteur
+ collection:
+  collection: Collection
+  name: Nom de la collection
+  new: Nouvelle collection
+  change: Changer collection
+  show: Details de la collection
+  select: Choisir collection
+ owner:
+  owner: Dépositaire
+  name: Nom
+  new: Nouveau Dépositaire
+  change: Changer dépositaire
+  show: Détails du dépositaire
+ publisher:
+  publisher: Editeur
+  name: Nom
+  street: Rue
+  zip: Code postal
+  city: Ville
+  tel: Tel.
+  country: Pays
+  new: Nouveau éditeur
+  change: Changer éditeur
+  show: Details de l'éditeur
+  select: Choisir éditeur
+ country:
+  country: Nationalité
+  name: Nom
+  namehint: p. ex. "Francais"
+  tag: Abbreviation
+  icon: Icone
+  iconhint: p. ex. "fr.png"
+  new: Nouvelle nationalité
+  change: Changer nationalité
+  show: Détails de la nationalité

@@ -1,0 +1,35 @@
+<h1><%=h t('publisher.new') %></h1>
+
+<% form_for(@publisher) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%=h t('publisher.name') %>:<br/>
+		<%= text_field(:publisher, :name) %>
+	</p>
+	<p>
+		<%=h t('publisher.street') %>:<br/>
+		<%= text_field(:publisher, :street) %>
+	</p>
+	<p>
+		<%=h t('publisher.zip') %>:<br/>
+		<%= text_field(:publisher, :zip) %>
+	</p>
+	<p>
+		<%=h t('publisher.city') %>:<br/>
+		<%= text_field(:publisher, :city) %>
+	</p>
+	<p>
+		<%=h t('publisher.tel') %>:<br/>
+		<%= text_field(:publisher, :tel) %>
+	</p>
+	<p>
+		<%=h t('country.country') %>:<br/>
+		<%= collection_select(:publisher, :country_id, Country.all(:order => 'name'), :id, :name, :include_blank => true) %>
+	</p>
+	<p>
+	  <%= f.submit t('common.create') %>
+	</p>
+<% end %>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), publishers_path %>
+</div>

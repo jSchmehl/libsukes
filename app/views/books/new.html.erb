@@ -1,0 +1,35 @@
+<h1><%=h t('book.new') %></h1>
+
+<% form_for(@book) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%=h t('book.title') %>:<br/>
+		<%= text_field(:book, :title) %>
+	</p>
+	<p>
+		<%=h t('author.author') %>:<br/>
+		<%= collection_select(:book, :author_id, Author.all(:order => 'name'), :id, :name, :include_blank => true) %>
+	</p>
+	<p>
+		<%=h t('publisher.publisher') %>:<br/>
+		<%= collection_select(:book, :publisher_id, Publisher.all(:order => 'name'), :id, :name, :include_blank => true) %>
+	</p>
+	<p>
+		<%=h t('collection.collection') %>:<br/>
+		<%= collection_select(:book, :collection_id, Collection.all(:order => 'name'), :id, :name, :include_blank => true) %>
+	</p>
+	<p>
+		<%=h t('owner.owner') %>:<br/>
+		<%= collection_select(:book, :owner_id, Owner.all(:order => 'name'), :id, :name, :include_blank => true) %>
+	</p>
+	<p>
+		<%=h t('book.printdate') %>:<br/>
+		<%= text_field(:book, :printdate) %>
+	</p>
+	<p>
+	  <%= f.submit t('common.create') %>
+	</p>
+<% end %>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), books_path %>
+</div>

@@ -1,0 +1,24 @@
+<h1><%=h t('country.change') %></h1>
+
+<% form_for(@country) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%=h t('country.name') %><br/>
+		<%= text_field(:country, :name) %>
+	</p>
+	<p>
+		<%=h t('country.tag') %><br/>
+		<%= text_field(:country, :tag) %>
+	</p>
+	<p>
+		<%=h t('country.icon') %><br/>
+		<%= text_field(:country, :icon) %>
+	</p>
+  <p>
+    <%= f.submit t('common.update') %>
+  </p>
+<% end %>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/vcard.png', :alt => t('common.view'), :title => t('common.view')), @country %>
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), countries_path %>
+</div>

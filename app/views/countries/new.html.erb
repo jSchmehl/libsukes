@@ -1,0 +1,23 @@
+<h1><%=h t('country.new') %></h1>
+
+<% form_for(@country) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%=h t('country.name') %>:<br/>
+		<%= text_field(:country, :name) %> <span class="hint"><%=h t('country.namehint') %></span>
+	</p>
+	<p>
+		<%=h t('country.tag') %>:<br/>
+		<%= text_field(:country, :tag) %>
+	</p>
+	<p>
+		<%=h t('country.icon') %>:<br/>
+		<%= text_field(:country, :icon) %> <span class="hint"><%=h t('country.iconhint') %></span>
+	</p>
+  <p>
+    <%= f.submit t('common.create') %>
+  </p>
+<% end %>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), countries_path %>
+</div>

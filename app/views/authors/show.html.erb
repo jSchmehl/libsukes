@@ -1,0 +1,19 @@
+<h1><%= t('author.show') %></h1>
+<div class="details">
+	<strong><%= @author.firstname %> <%= @author.name %></strong>
+	<br/><br/><br/>
+	vécu de <strong><%= @author.birthdate %></strong> à <strong><%= @author.deathdate %></strong>
+	<br/><br/>
+	<%= t('author.country') %>: <strong><%= @author.country.name unless @author.country.nil? %></strong>
+	<br/><br/><br/>
+	<%=t 'book.books' %>:<br/>
+	<ul>
+		<% @books.each do |book| %>
+				<li><%= link_to book.title, book %></li>
+		<% end %>
+	</ul>
+</div>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/vcard_edit.png', :alt => t('common.edit'), :title => t('common.edit')), edit_author_path(@author) %>
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), authors_path %>
+</div>

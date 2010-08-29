@@ -1,0 +1,12 @@
+<table class="smalllist"><tbody>
+<% @collections.each do |collection| %>
+	<tr>
+		<td><strong><%= link_to collection.name, collection %></strong></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard.png', :alt => t('common.view'), :title => t('common.view')), collection %></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard_edit.png', :alt => t('common.edit'), :title => t('common.edit')), edit_collection_path(collection) %></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard_delete.png', :alt => t('common.delete'), :title => t('common.delete')), collection, :confirm => t('common.erasequestion'), :method => :delete %></td>
+	</tr>
+<% end %>
+</tbody></table>
+<br/><br/><br/>
+<%= will_paginate @collections, :previous_label => t('common.previous'), :next_label => t('common.next') %>

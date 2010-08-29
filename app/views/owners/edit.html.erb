@@ -1,0 +1,16 @@
+<h1><%=h t('owner.change') %></h1>
+
+<% form_for(@owner) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%=h t('owner.name') %><br/>
+		<%= text_field(:owner, :name) %>
+	</p>
+  <p>
+    <%= f.submit t('common.update') %>
+  </p>
+<% end %>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/vcard.png', :alt => t('common.view'), :title => t('common.view')), @owner %>
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), owners_path %>
+</div>

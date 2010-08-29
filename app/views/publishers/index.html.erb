@@ -1,0 +1,14 @@
+<table class="smalllist"><tbody>
+<% @publishers.each do |publisher| %>
+  <tr>
+		<td><strong><%= link_to publisher.name, publisher %></strong></td>
+		<td><%=h publisher.city %></td>
+		<td><%= image_tag('flags/'+publisher.country.icon, :alt => publisher.country.tag) unless publisher.country.nil? %></td>
+    <td><%= link_to image_tag('icons/book_open.png', :alt => t('common.view'), :title => t('common.view')), publisher %></td>
+    <td><%= link_to image_tag('icons/book_edit.png', :alt => t('common.edit'), :title => t('common.edit')), edit_publisher_path(publisher) %></td>
+    <td><%= link_to image_tag('icons/book_delete.png', :alt => t('common.delete'), :title => t('common.delete')), publisher, :confirm => t('common.erasequestion'), :method => :delete %></td>
+  </tr>
+<% end %>
+</tbody></table>
+<br/><br/><br/>
+<%= will_paginate @publishers, :previous_label => t('common.previous'), :next_label => t('common.next') %>

@@ -1,0 +1,14 @@
+<table class="smalllist"><tbody>
+<% @authors.each do |author| %>
+	<% @firstname='' %>
+	<% @firstname=', '+author.firstname unless author.firstname.nil? %>
+	<tr>
+		<td><strong><%= link_to author.name+@firstname, author %></strong></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard.png', :alt => t('common.view'), :title => t('common.view')), author %></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard_edit.png', :alt => t('common.edit'), :title => t('common.edit')), edit_author_path(author) %></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard_delete.png', :alt => t('common.delete'), :title => t('common.delete')), author, :confirm => t('common.erasequestion'), :method => :delete %></td>
+	</tr>
+<% end %>
+</tbody></table>
+<br/><br/><br/>
+<%= will_paginate @authors, :previous_label => t('common.previous'), :next_label => t('common.next') %>
