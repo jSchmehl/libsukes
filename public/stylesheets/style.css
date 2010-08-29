@@ -26,6 +26,7 @@ a:hover {
 }
 a:hover img {
 	opacity: 0.75;
+	filter: alpha(opacity = 75);
 }
 a.img_link:hover {
 	background-color: transparent;
