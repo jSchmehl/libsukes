@@ -28,12 +28,17 @@ class BooksController < ApplicationController
 	# GET /books/search/query
   # GET /books/search/query.xml
   def search
-    @books = Book.search_for(params[:query]).paginate :page => params[:page], :include => :author, :order => 'title ASC'
+	
+		if params[:id].nil?
+			redirect_to :action => 'search', :id => params[:query]
+		else
+	    @books = Book.search_for(params[:id]).paginate :page => params[:page], :include => :author, :order => 'title ASC'
 
-    respond_to do |format|
-      format.html { render 'index' }
-      format.xml  { render :xml => @books }
-    end
+	    respond_to do |format|
+	      format.html { render 'index' }
+	      format.xml  { render :xml => @books }
+	    end
+		end
   end
 
   # GET /books/new

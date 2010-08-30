@@ -1,3 +1,4 @@
+<% if @books.size > 0 %>
 <table class="list"><tbody>
 	<tr>
 		<th style="width: 40%;"><%=h t('book.title') %></th>
@@ -18,5 +19,9 @@
   </tr>
 <% end %>
 </tbody></table>
+<% else %>
+<br/><br/><br/>
+<p style="text-align: center;">Auccun livre trouvé</p>
+<% end %>
 <br/><br/><br/>
 <%= will_paginate @books, :previous_label => t('common.previous'), :next_label => t('common.next') %>
