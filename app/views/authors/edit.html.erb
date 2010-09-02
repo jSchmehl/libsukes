@@ -4,7 +4,7 @@
   <%= f.error_messages %>
 	<p>
 		<%=h t('author.name') %>:<br/>
-		<%= text_field(:author, :name) %>
+		<%= text_field(:author, :name, :onblur=>'this.value = this.value.toUpperCase();') %> <span class="hint"><%=h t('author.name_hint') %></span>
 	</p>
 	<p>
 		<%=h t('author.firstname') %>:<br/>

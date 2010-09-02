@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<title>LibSukés -la librairie des netsukés- | <%= controller.controller_name %></title>
+	<title>BibSukés -la bibliothèque des netsukés- | <%= controller.controller_name %></title>
 	<link rel="shortcut icon" type="image/x-icon" href="<%= image_path('favicon.ico') %>">
 	<%= javascript_include_tag :defaults, :cache => true %>
 	<%= stylesheet_link_tag 'scaffold', 'style', :cache => true %>
@@ -17,48 +17,48 @@
 				<%= text_field_tag('query', t('book.search'), :onfocus => "this.value=''", :id => 'search-text') %>
 				<%= submit_tag t('common.search_submit') %>
 			<% end -%>
-			<p>n'importe quel mot dans le titre, nom d'auteur, de collection, d'èditeur et dépositaire</p>
+			<p><%= t('common.search_hint') %></p>
 		</div>
 	</li>
 	<li>
 		<h3 style="margin-top: 10px;">Listes</h3>
 		<ul class="links">
-			<li><%= link_to 'Toutes livres (A-Z)', :controller => 'books' %></li>
-			<li><%= link_to 'Dernieres entrées', :controller => 'books', :sort => 'created_at' %></li>
+			<li><%= link_to t('nav.list_books'), :controller => 'books' %></li>
+			<li><%= link_to t('nav.last_entries'), :controller => 'books', :sort => 'created_at' %></li>
 			<li>
-				Par auteur:<br/>
+				<%= t('nav.by_author') %>:<br/>
 				<%= collection_select(:author, :id, Author.all(:order => 'name'), :id, :name, {:include_blank=>t('author.select')}, {:onchange => 'window.location = "/authors/"+this.options[this.selectedIndex].value;'}) %>
 			</li>
 			<li>
-				Par editeur:<br/>
+				<%= t('nav.by_publisher') %>:<br/>
 				<%= collection_select(:publisher, :id, Publisher.all(:order => 'name'), :id, :name, {:include_blank=>t('publisher.select')}, {:onchange => 'window.location = "/publishers/"+this.options[this.selectedIndex].value;'}) %>
 			</li>
 			<li>
-				Par collection:<br/>
+				<%= t('nav.by_collection') %>:<br/>
 				<%= collection_select(:collection, :id, Collection.all(:order => 'name'), :id, :name, {:include_blank=>t('collection.select')}, {:onchange => 'window.location = "/collections/"+this.options[this.selectedIndex].value;'}) %>
 			</li>
-			<li><%= link_to 'Liste auteurs', :controller => 'authors' %></li>
-			<li><%= link_to 'Liste éditeurs', :controller => 'publishers' %></li>
-			<li><%= link_to 'Liste collections', :controller => 'collections' %></li>
+			<li><%= link_to t('nav.list_authors'), :controller => 'authors' %></li>
+			<li><%= link_to t('nav.list_publishers'), :controller => 'publishers' %></li>
+			<li><%= link_to t('nav.list_collections'), :controller => 'collections' %></li>
 		</ul>
 	</li>
 	<li>
 		<h3>Edition</h3>
 		<ul class="links">
-			<li><%= link_to 'Nouveau livre', :controller => 'books', :action => 'new' %></li>
-			<li><%= link_to 'Nouveau auteur', :controller => 'authors', :action => 'new' %></li>
-			<li><%= link_to 'Nouveau editeur', :controller => 'publishers', :action => 'new' %></li>
-			<li><%= link_to 'Nouvelle collection', :controller => 'collections', :action => 'new' %></li>
-			<li><%= link_to 'Nouvelle nationalité', :controller => 'countries', :action => 'new' %></li>
-			<li><%= link_to 'Nouveau dépositaire', :controller => 'owners', :action => 'new' %></li>
+			<li><%= link_to t('book.new'), :controller => 'books', :action => 'new' %></li>
+			<li><%= link_to t('author.new'), :controller => 'authors', :action => 'new' %></li>
+			<li><%= link_to t('publisher.new'), :controller => 'publishers', :action => 'new' %></li>
+			<li><%= link_to t('collection.new'), :controller => 'collections', :action => 'new' %></li>
+			<li><%= link_to t('country.new'), :controller => 'countries', :action => 'new' %></li>
+			<li><%= link_to t('owner.new'), :controller => 'owners', :action => 'new' %></li>
 		</ul>
 	</li>
 	</ul>
 </div>
 <div id="main">
 <div id="header">
-	<p class="title1">LibSukés</p>
-	<p class="title2">la librairie des netsukés</p>
+	<p class="title1">BibSukés</p>
+	<p class="title2">la bibliothèque des netsukés</p>
 </div>
 <div id="content">
 	<p style="color: green"><%= flash[:notice] %></p>

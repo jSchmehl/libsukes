@@ -6,4 +6,11 @@ class Author < ActiveRecord::Base
 	has_many :books
 	belongs_to :country
 	
+	before_save :name_to_uppercase
+
+  protected
+  def name_to_uppercase
+    self.name = self.name.upcase
+  end
+	
 end

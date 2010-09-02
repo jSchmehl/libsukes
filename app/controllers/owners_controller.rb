@@ -14,7 +14,7 @@ class OwnersController < ApplicationController
   # GET /owners/1.xml
   def show
     @owner = Owner.find(params[:id])
-		@books = Book.find(:all, :conditions => {:author_id => params[:id]}, :order => 'title ASC')
+		@books = Book.find(:all, :conditions => {:owner_id => params[:id]}, :order => 'LOWER(title) ASC')
 
     respond_to do |format|
       format.html # show.html.erb

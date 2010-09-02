@@ -2,7 +2,7 @@ class AuthorsController < ApplicationController
   # GET /authors
   # GET /authors.xml
   def index
-    @authors = Author.paginate :page => params[:page], :order => 'name ASC'
+    @authors = Author.paginate :page => params[:page], :order => 'LOWER(name) ASC'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,7 @@ class AuthorsController < ApplicationController
   # GET /authors/1.xml
   def show
     @author = Author.find(params[:id])
-		@books = Book.find(:all, :conditions => {:author_id => params[:id]}, :order => 'title ASC')
+		@books = Book.find(:all, :conditions => {:author_id => params[:id]}, :order => 'LOWER(title) ASC')
 
     respond_to do |format|
       format.html # show.html.erb

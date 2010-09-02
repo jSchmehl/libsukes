@@ -6,7 +6,7 @@ class BooksController < ApplicationController
 		when 'created_at'
 			@books = Book.paginate :page => params[:page], :include => :author, :order => 'created_at DESC'
 		else
-			@books = Book.paginate :page => params[:page], :include => :author, :order => 'title ASC'
+			@books = Book.paginate :page => params[:page], :include => :author, :order => 'LOWER(title) ASC'
 		end
 		respond_to do |format|
 			format.html # index.html.erb

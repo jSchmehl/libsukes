@@ -2,7 +2,7 @@ class CollectionsController < ApplicationController
   # GET /collections
   # GET /collections.xml
   def index
-    @collections = Collection.paginate :page => params[:page], :order => 'name DESC'
+    @collections = Collection.paginate :page => params[:page], :order => 'LOWER(name) ASC'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,7 @@ class CollectionsController < ApplicationController
   # GET /collections/1.xml
   def show
     @collection = Collection.find(params[:id])
-		@books = Book.find(:all, :conditions => {:collection_id => params[:id]})
+		@books = Book.find(:all, :conditions => {:collection_id => params[:id]}, :order => 'LOWER(title) ASC')
 
     respond_to do |format|
       format.html # show.html.erb

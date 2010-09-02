@@ -15,6 +15,16 @@ fr:
   erasequestion: Êtes-vous sure d'effacer?
   search: Chercher
   search_submit: Go
+  search_hint: n'importe quel mot dans le titre, nom d'auteur, de collection, d'éditeur et dépositaire
+ nav:
+  list_books: Liste des livres
+  list_authors: Liste des auteurs
+  list_publishers: Liste des éditeurs
+  list_collections: Liste des collections
+  last_entries: Dernières entrées
+  by_author: Par auteur
+  by_publisher: Par éditeur
+  by_collection: Par collection
  book:
   book: Livre
   books: Livres
@@ -31,10 +41,11 @@ fr:
   country: Nationalité
   birthdate: Année de naissance
   deathdate: Année de déces
-  new: Nouveau auteur
+  new: Nouvel auteur
   change: Changer auteur
   show: Details de l'auteur
   select: Choisir auteur
+  name_hint: Nom en majuscules
  collection:
   collection: Collection
   name: Nom de la collection
@@ -45,7 +56,7 @@ fr:
  owner:
   owner: Dépositaire
   name: Nom
-  new: Nouveau Dépositaire
+  new: Nouveau dépositaire
   change: Changer dépositaire
   show: Détails du dépositaire
  publisher:
@@ -56,7 +67,7 @@ fr:
   city: Ville
   tel: Tel.
   country: Pays
-  new: Nouveau éditeur
+  new: Nouvel éditeur
   change: Changer éditeur
   show: Details de l'éditeur
   select: Choisir éditeur
