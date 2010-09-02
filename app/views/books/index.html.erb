@@ -24,4 +24,6 @@
 <p style="text-align: center;">Auccun livre trouvé</p>
 <% end %>
 <br/><br/><br/>
+<% if true %>
 <%= will_paginate @books, :previous_label => t('common.previous'), :next_label => t('common.next') %>
+<% end %>

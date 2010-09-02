@@ -4,7 +4,8 @@ class BooksController < ApplicationController
 	def index
 		case params[:sort]
 		when 'created_at'
-			@books = Book.paginate :page => params[:page], :include => :author, :order => 'created_at DESC'
+			@books = Book.all :order => 'created_at DESC', :limit => 10
+			@books = @books.paginate :page => params[:page], :include => :author, :order => 'created at DESC'
 		else
 			@books = Book.paginate :page => params[:page], :include => :author, :order => 'LOWER(title) ASC'
 		end
