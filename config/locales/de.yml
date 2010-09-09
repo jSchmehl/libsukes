@@ -1,0 +1,83 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+de:
+ common:
+  back: Zurück
+  previous: Zurück
+  next: Nächste
+  create: Hinzufügen
+  update: Ändern
+  view: Details
+  new: Neu
+  edit: Ändern
+  delete: Löschen
+  erasequestion: -Löschen- Sind Sie sicher?
+  search: Suchen
+  search_submit: Go
+  search_hint: n'importe quel mot dans le titre, nom d'auteur, de collection, d'éditeur et dépositaire
+ nav:
+  list_books: Übersicht Bücher
+  list_authors: Übersicht Autoren
+  list_publishers: Übersicht Herausgeber
+  list_collections: Übersicht Buchreihe
+  last_entries: Letzte Einträge
+  by_author: Nach Autor
+  by_publisher: Nach Herausgeber
+  by_collection: Nach Buchreihe
+ book:
+  book: Buch
+  books: Livres
+  title: Titre
+  exemplar: N° Exemplaire
+  printdate: Année d'impression
+  new: Nouveau livre
+  change: Changer livre
+  search: Rechercher livres
+ author:
+  author: Autor
+  name: Nom
+  firstname: Prénom
+  country: Nationalité
+  birthdate: Année de naissance
+  deathdate: Année de déces
+  new: Nouvel auteur
+  change: Changer auteur
+  show: Details de l'auteur
+  select: Choisir auteur
+  name_hint: Nom en majuscules
+ collection:
+  collection: Buchreihe
+  name: Nom de la collection
+  new: Nouvelle collection
+  change: Changer collection
+  show: Details de la collection
+  select: Choisir collection
+ owner:
+  owner: Eigentümer
+  name: Nom
+  new: Nouveau dépositaire
+  change: Changer dépositaire
+  show: Détails du dépositaire
+ publisher:
+  publisher: Herausgeber
+  name: Nom
+  street: Rue
+  zip: Code postal
+  city: Ville
+  tel: Tel.
+  country: Pays
+  new: Nouvel éditeur
+  change: Changer éditeur
+  show: Details de l'éditeur
+  select: Choisir éditeur
+ country:
+  country: Nationalität
+  name: Nom
+  namehint: p. ex. "Francais"
+  tag: Abbreviation
+  icon: Icone
+  iconhint: p. ex. "fr.png"
+  new: Nouvelle nationalité
+  change: Changer nationalité
+  show: Détails de la nationalité
