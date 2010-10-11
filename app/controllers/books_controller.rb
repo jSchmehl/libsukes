@@ -15,6 +15,17 @@ class BooksController < ApplicationController
 		end
 	end
 
+	# GET /books/overview
+	def overview
+		@num_books = Book.count
+		@num_authors = Author.count
+		@last_update = Book.count
+		
+		respond_to do |format|
+			format.html # overview.html.erb
+		end
+	end
+
   # GET /books/1
   # GET /books/1.xml
   def show

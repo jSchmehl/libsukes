@@ -49,7 +49,7 @@ p {
 	border-top: none;
 	padding: 20px;
 	width: 630px;
-	min-height: 580px;
+	min-height: 600px;
 }
 
 #sidebar {
@@ -67,18 +67,27 @@ p {
 	text-align: center;
 	padding: 4px;
 }
+div.wrap_footer {
+ clear: both;
+}
 #header {
 	background: url(../images/header.png) no-repeat top left;
 	padding-left: 80px;
 	padding-right: 30px;
 	height: 62px;
 }
-#header .title1 {
+#header .locales {
+	float: right;
+	position: relative;
+	left: 20px;
+}
+#header a p.title1 {
+	color: #333;
 	font-weight: bold;
 	font-size: 20px;
 	padding: 14px 0 2px 0;
 }
-#header .title2 {
+#header a p.title2 {
 	color: #888;
 	font-weight: normal;
 	font-size: 16px;

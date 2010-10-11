@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :genres
+
   map.resources :countries
 
   map.resources :books
@@ -10,6 +12,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :collections
 
   map.resources :publishers
+
+	map.connect 'overview', :controller => 'books', :action => 'overview'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -52,5 +56,5 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
 	map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-	map.root :controller => 'books'
+	map.root :controller => 'books', :action => 'overview'
 end

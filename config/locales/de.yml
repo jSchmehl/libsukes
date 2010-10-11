@@ -16,15 +16,19 @@ de:
   search: Suchen
   search_submit: Go
   search_hint: n'importe quel mot dans le titre, nom d'auteur, de collection, d'éditeur et dépositaire
+  locale_fr: Francais
+  locale_de: Deutsch
  nav:
   list_books: Übersicht Bücher
   list_authors: Übersicht Autoren
   list_publishers: Übersicht Herausgeber
   list_collections: Übersicht Buchreihe
+  list_genres: Übersicht Genres
   last_entries: Letzte Einträge
   by_author: Nach Autor
   by_publisher: Nach Herausgeber
   by_collection: Nach Buchreihe
+  by_genre: Nach Genre
  book:
   book: Buch
   books: Livres
@@ -53,6 +57,13 @@ de:
   change: Changer collection
   show: Details de la collection
   select: Choisir collection
+ genre:
+  genre: Genre
+  name: Nom de la rubrique
+  new: Nouvelle rubrique
+  change: Modifier rubrique
+  show: Détails de le rubrique
+  select: Choisir rubrique
  owner:
   owner: Eigentümer
   name: Nom

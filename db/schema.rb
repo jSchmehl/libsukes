@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100314202024) do
+ActiveRecord::Schema.define(:version => 20101011125738) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20100314202024) do
     t.integer  "printdate"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "genre_id"
   end
 
   create_table "collections", :force => true do |t|
@@ -43,6 +44,12 @@ ActiveRecord::Schema.define(:version => 20100314202024) do
     t.string   "name"
     t.string   "tag"
     t.string   "icon"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "genres", :force => true do |t|
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

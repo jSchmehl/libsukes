@@ -2,6 +2,7 @@
 	<tr><td><%=t 'book.title' %>:</td><td><strong><%=h @book.title %></strong></td></tr>
 	<tr><td><%=t 'author.author' %>:</td><td><%=h @book.author.name unless @book.author.nil? %></td></tr>
 	<tr><td><%=t 'collection.collection' %>:</td><td><%=h @book.collection.name unless @book.collection.nil? %></td></tr>
+	<tr><td><%=t 'genre.genre' %>:</td><td><%=h @book.genre.name unless @book.genre.nil? %></td></tr>
 	<tr><td><%=t 'publisher.publisher' %>:</td><td><%=h @book.publisher.name unless @book.publisher.nil? %></td></tr>
 	<tr><td><%=t 'owner.owner' %>:</td><td><%=h @book.owner.name unless @book.owner.nil? %></td></tr>
 	<tr><td><%=t 'book.exemplar' %>:</td><td><%=h @book.exemplar %></td></tr>

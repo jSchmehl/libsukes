@@ -19,6 +19,10 @@
 		<%= collection_select(:book, :collection_id, Collection.all(:order => 'name'), :id, :name, :include_blank => true) %>
 	</p>
 	<p>
+		<%=h t('genre.genre') %>:<br/>
+		<%= collection_select(:book, :genre_id, Genre.all(:order => 'name'), :id, :name, :include_blank => true) %>
+	</p>
+	<p>
 		<%=h t('owner.owner') %>:<br/>
 		<%= collection_select(:book, :owner_id, Owner.all(:order => 'name'), :id, :name, :include_blank => true) %>
 	</p>

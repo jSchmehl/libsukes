@@ -6,25 +6,29 @@ fr:
   back: Precedent
   previous: Précédente
   next: Suivante
-  create: Ajouter
-  update: Changer
-  view: Details
-  new: Ajouter
-  edit: Changer
+  create: Sauvgarder
+  update: Sauvgarder
+  view: Détails
+  new: Sauvgarder
+  edit: Modifier
   delete: Effacer
   erasequestion: Êtes-vous sure d'effacer?
   search: Chercher
   search_submit: Go
   search_hint: n'importe quel mot dans le titre, nom d'auteur, de collection, d'éditeur et dépositaire
+  locale_fr: Francais
+  locale_de: Deutsch
  nav:
   list_books: Liste des livres
   list_authors: Liste des auteurs
   list_publishers: Liste des éditeurs
   list_collections: Liste des collections
+  list_genres: Liste des rubriques
   last_entries: Dernières entrées
   by_author: Par auteur
   by_publisher: Par éditeur
   by_collection: Par collection
+  by_genre: Par rubrique
  book:
   book: Livre
   books: Livres
@@ -53,6 +57,13 @@ fr:
   change: Changer collection
   show: Details de la collection
   select: Choisir collection
+ genre:
+  genre: Rubrique
+  name: Nom de la rubrique
+  new: Nouvelle rubrique
+  change: Modifier rubrique
+  show: Détails de la rubrique
+  select: Choisir rubrique
  owner:
   owner: Dépositaire
   name: Nom

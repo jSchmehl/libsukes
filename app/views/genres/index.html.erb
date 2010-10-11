@@ -1,0 +1,12 @@
+<table class="smalllist"><tbody>
+<% @genres.each do |genre| %>
+	<tr>
+		<td><strong><%= link_to genre.name, genre %></strong></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard.png', :alt => t('common.view'), :title => t('common.view')), genre %></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard_edit.png', :alt => t('common.edit'), :title => t('common.edit')), edit_genre_path(genre) %></td>
+	  <td style="width: 25px;"><%= link_to image_tag('icons/vcard_delete.png', :alt => t('common.delete'), :title => t('common.delete')), genre, :confirm => t('common.erasequestion'), :method => :delete %></td>
+	</tr>
+<% end %>
+</tbody></table>
+<br/><br/><br/>
+<%= will_paginate @genres, :previous_label => t('common.previous'), :next_label => t('common.next') %>

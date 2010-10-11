@@ -1,0 +1,16 @@
+<h1><%=h t('genre.change') %></h1>
+
+<% form_for(@genre) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%=h t('genre.name') %><br/>
+		<%= text_field(:genre, :name) %>
+	</p>
+  <p>
+    <%= f.submit t('common.update') %>
+  </p>
+<% end %>
+<div class="nav_bottom">
+	<%= link_to image_tag('icons/vcard.png', :alt => t('common.view'), :title => t('common.view')), @genre %>
+	<%= link_to image_tag('icons/arrow_undo.png', :alt => t('common.back'), :title => t('common.back')), genres_path %>
+</div>
