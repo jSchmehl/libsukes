@@ -37,3 +37,211 @@ Processing BooksController#index (for 127.0.0.1 at 2010-09-10 10:51:28) [GET]
 Rendering template within layouts/books
 Rendering books/index
 Completed in 365ms (View: 244, DB: 94) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:40:00) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:40:00) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+
+ActionView::TemplateError (PGError: ERROR:  relation "genres" does not exist
+: SELECT * FROM "genres"  ORDER BY name) on line #44 of app/views/layouts/_header.erb:
+41: 			</li>
+42: 			<li>
+43: 				<%= t('nav.by_genre') %>:<br/>
+44: 				<%= collection_select(:genre, :id, Genre.all(:order => 'name'), :id, :name, {:include_blank=>t('genre.select')}, {:onchange => 'window.location = "/genres/"+this.options[this.selectedIndex].value;'}) %>
+45: 			</li>
+46: 			<li><%= link_to t('nav.list_authors'), :controller => 'authors' %></li>
+47: 			<li><%= link_to t('nav.list_publishers'), :controller => 'publishers' %></li>
+
+    app/views/layouts/_header.erb:44
+    app/views/layouts/books.html.erb:1
+    app/controllers/books_controller.rb:24:in `overview'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:41:24) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:41:24) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 87ms (View: 64, DB: 13) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:41:27) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 57ms (View: 43, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:41:27) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 56ms (View: 42, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:41:28) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 55ms (View: 42, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:41:28) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 67ms (View: 49, DB: 15) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:41:29) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 55ms (View: 42, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:41:29) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 122ms (View: 108, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:50) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:50) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 63ms (View: 45, DB: 14) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:51) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 57ms (View: 43, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:52) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 123ms (View: 110, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:52) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 58ms (View: 44, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:52) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 59ms (View: 45, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:53) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 127ms (View: 112, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:53) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 55ms (View: 42, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:54) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 56ms (View: 43, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:55) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 139ms (View: 116, DB: 21) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:43:57) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 56ms (View: 43, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:44:28) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:44:28) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 56ms (View: 43, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:44:29) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 127ms (View: 111, DB: 14) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:44:30) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 73ms (View: 57, DB: 14) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:44:30) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 56ms (View: 43, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:44:30) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 123ms (View: 110, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:48:16) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:48:16) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 58ms (View: 44, DB: 13) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:48:17) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 56ms (View: 43, DB: 11) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:48:27) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 86ms (View: 64, DB: 13) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:48:29) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 58ms (View: 44, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing BooksController#overview (for 127.0.0.1 at 2010-10-11 18:48:37) [GET]
+Rendering template within layouts/books
+Rendering books/overview
+Completed in 58ms (View: 45, DB: 12) | 200 OK [http://localhost/overview]
